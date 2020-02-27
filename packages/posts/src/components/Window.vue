@@ -1,5 +1,5 @@
 <template>
-  <div class="window" id="draggable-posts">
+  <div class="window posts" id="draggable-posts">
     <div class="header">
       <button class="btn"></button>
     </div>
@@ -23,6 +23,6 @@ export default {
 }
 </script>
 <style>
-  .window{ width: 300px; height: 300px; box-shadow: 0 0 1px 1px #ccc; background-color: #fefefe; padding: 15px; border-radius: 8px; }
-  .btn{ background-color: red; width: 18px; height: 18px; border-radius: 100%; border: none; float: right; }
+  .window.posts{ width: 300px; height: 300px; position: absolute; left: calc(50% - 150px); top: calc(50% - 150px); box-shadow: 0 0 1px 1px #ccc; background-color: #fefefe; padding: 15px; border-radius: 8px; }
+  .window.posts .btn{ background-color: red; width: 18px; height: 18px; border-radius: 100%; border: none; float: right; }
 </style>
