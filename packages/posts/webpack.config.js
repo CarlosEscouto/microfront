@@ -11,7 +11,7 @@ module.exports = {
     filename: 'posts.js',
     library: 'posts',
     libraryTarget: 'amd',
-    path: path.resolve(__dirname, 'build/posts'),
+    path: path.resolve(__dirname, '../../build/posts'),
   },
   mode: 'production',
   module: {

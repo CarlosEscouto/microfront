@@ -1,7 +1,7 @@
 <template>
   <div class="window authors" id="draggable-authors">
     <div class="header">
-      <button class="btn"></button>
+      <button class="btn" @click="unMount()"></button>
     </div>
     <div class="body">
       Projeto autores
@@ -13,12 +13,20 @@ export default {
   name: 'Window',
   mounted() {
     $( "#draggable-authors" ).draggable();
+
+    $('.window.authors').click(function() {
+      $('.window').css('z-index', '1')
+      $('.window.authors').css('z-index', '2')
+    })
   },
   data() {
     return {}
   },
   methods: {
-    //
+    unMount() {
+      $('#authors').html('')
+      if (this.$router.history.current.path !== '/') this.$router.push('/')
+    }
   },
 }
 </script>

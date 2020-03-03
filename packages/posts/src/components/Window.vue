@@ -1,7 +1,7 @@
 <template>
   <div class="window posts" id="draggable-posts">
     <div class="header">
-      <button class="btn"></button>
+      <button class="btn" @click="unMount()"></button>
     </div>
     <div class="body">
       Projeto posts
@@ -13,12 +13,20 @@ export default {
   name: 'Window',
   mounted() {
     $( "#draggable-posts" ).draggable();
+
+    $('.window.posts').click(function() {
+      $('.window').css('z-index', '1')
+      $('.window.posts').css('z-index', '2')
+    })
   },
   data() {
     return {}
   },
   methods: {
-    //
+    unMount() {
+      $('#posts').html('')
+      if (this.$router.history.current.path !== '/') this.$router.push('/')
+    }
   },
 }
 </script>

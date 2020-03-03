@@ -1,18 +1,16 @@
 import Vue from 'vue'
 import App from './App.vue'
+import router from './router';
 import singleSpaVue from 'single-spa-vue';
 
 Vue.config.productionTip = false
-
-// new Vue({
-//   render: h => h(App),
-// }).$mount('#app')
 
 const vueLifecycles = singleSpaVue({
   Vue,
   appOptions: {
     el: '#authors',
-    render: r => r(App)
+    render: r => r(App),
+    router,
   } 
 });
 

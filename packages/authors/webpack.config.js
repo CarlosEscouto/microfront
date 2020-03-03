@@ -11,7 +11,7 @@ module.exports = {
     filename: 'authors.js',
     library: 'authors',
     libraryTarget: 'amd',
-    path: path.resolve(__dirname, 'build/authors'),
+    path: path.resolve(__dirname, '../../build/authors'),
   },
   mode: 'production',
   module: {

@@ -12,22 +12,19 @@ export function navbar(location) {
 }
 
 export function authors(location) {
+
   if (document.querySelector('#authors').childElementCount == 0 && prefix(location, 'authors')) {
     return true
   } else if (document.querySelector('#authors').childElementCount >= 1) {
     return true
   }
-  // return (window.parametro !== undefined && window.parametro == 'authors')
-  // return true
 }
 
 export function posts(location) {
+
   if (document.querySelector('#posts').childElementCount == 0 && prefix(location, 'posts')) {
     return true
   } else if (document.querySelector('#posts').childElementCount >= 1) {
     return true
   }
-
-  // return window.parametro !== undefined && window.parametro == 'posts'
-  // return true
 }

@@ -11,7 +11,7 @@ module.exports = {
     filename: 'navbar.js',
     library: 'navbar',
     libraryTarget: 'amd',
-    path: path.resolve(__dirname, 'build/navbar'),
+    path: path.resolve(__dirname, '../../build/navbar'),
   },
   mode: 'production',
   module: {
