@@ -3,13 +3,13 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width" />
-    <title></title>
+    <title>MicroFronts</title>
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
   </head>
   <body>
 
-    <!-- "@portal/navbar": "http://localhost:8235/navbar.js", -->
+    <!-- Esquema para lidar com cache separado, estudar sobre ainda -->
     <!-- "@portal/fetchWithCache": "http://localhost:8238/fetchWithCache.js" -->
     <script type="systemjs-importmap">
       {
@@ -28,35 +28,24 @@
 
     <!-- Load the common deps-->
     <script src="http://localhost:8234/common-deps.js"></script>
-    <div>
-      <!-- <button id="btnAuthors">Autores</button>
-      <button id="btnPosts">Posts</button> -->
-      <div id="navbar"></div>
-    </div>
+
+    <!-- Load bar -->
+    <div id="navbar"></div>
+
+    <!-- Load Apps -->
     <div id="content">
       <div id="authors"></div>
       <div id="posts"></div>
     </div>
-    
 
-    <script>
-      // document.querySelector('#btnAuthors').addEventListener('click', () => {
-      //   location.href = 'authors'
-      // })
-      // document.querySelector('#btnPosts').addEventListener('click', () => {
-      //   location.href = 'posts'
-      // })
-    </script>
     <!-- Load the application -->
     <script>
       System.import('@portal/config')
     </script>
 
-    <!-- Static navbar -->
+    <!-- Static scripts -->
     <link rel="stylesheet" href="http://localhost:8233/styles.css">
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
-    <!-- <div id='navbar'>
-    </div> -->
 
   </body>
 </html>

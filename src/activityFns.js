@@ -12,7 +12,7 @@ export function navbar(location) {
 }
 
 export function authors(location) {
-
+  // Manter aberto apos a primeiro execução
   if (document.querySelector('#authors').childElementCount == 0 && prefix(location, 'authors')) {
     return true
   } else if (document.querySelector('#authors').childElementCount >= 1) {
@@ -21,7 +21,7 @@ export function authors(location) {
 }
 
 export function posts(location) {
-
+  // Manter aberto apos a primeiro execução
   if (document.querySelector('#posts').childElementCount == 0 && prefix(location, 'posts')) {
     return true
   } else if (document.querySelector('#posts').childElementCount >= 1) {
