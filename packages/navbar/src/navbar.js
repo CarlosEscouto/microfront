@@ -5,8 +5,6 @@ import App from './App.vue';
 import router from './router';
 import singleSpaVue from 'single-spa-vue';
 
-Vue.use(Vuex)
-
 Vue.config.productionTip = false
 
 const vueLifecycles = singleSpaVue({

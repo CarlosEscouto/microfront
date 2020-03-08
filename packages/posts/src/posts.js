@@ -1,11 +1,8 @@
 import Vue from 'vue';
-import Vuex from 'vuex';
-import store from '../../navbar/src/vuex';
+import store from './vuex';
 import App from './App.vue'
 import router from './router';
 import singleSpaVue from 'single-spa-vue';
-console.log(store)
-Vue.use(Vuex)
 
 Vue.config.productionTip = false
 
