@@ -1,22 +1,34 @@
 <template>
-  <div class="window posts" id="draggable-posts">
+  <div class="window posts" :id="'draggable-' + id">
+
     <div class="header">
       <button class="btn" @click="unMount()"></button>
     </div>
+
     <div class="body">
       Projeto posts
     </div>
+
+    <list-posts></list-posts>
+
   </div>
 </template>
 <script>
+import ListPosts from './List.vue';
 export default {
   name: 'Window',
+  components: {
+    ListPosts,
+  },
+  props: {
+    id: String
+  },
   mounted() {
-    $( "#draggable-posts" ).draggable();
+    $( `#draggable-${this.id}` ).draggable();
 
     $('.window.posts').click(function() {
       $('.window').css('z-index', '1')
-      $('.window.posts').css('z-index', '2')
+      $(`#draggable-${this.id}`).css('z-index', '2')
     })
   },
   data() {
@@ -24,8 +36,9 @@ export default {
   },
   methods: {
     unMount() {
-      $('#posts').html('')
+       $(`#draggable-${this.id}`).remove()
       if (this.$router.history.current.path !== '/') this.$router.push('/')
+      if (document.querySelector('#posts div').childElementCount < 1) { $('#posts').html('') }
     }
   },
 }

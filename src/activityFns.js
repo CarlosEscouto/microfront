@@ -21,6 +21,13 @@ export function authors(location) {
 }
 
 export function posts(location) {
+  // Adiciona mais 1 a 'posts' no localStorage
+  if (prefix(location, 'posts')) {
+    window.localStorage.setItem('posts', Number(window.localStorage.getItem('posts')) + 1)
+    // Evento do storage só funciona em window diferente - Isso força o evento
+    window.dispatchEvent(new window.StorageEvent('storage'))
+  }
+
   // Manter aberto apos a primeiro execução
   if (document.querySelector('#posts').childElementCount == 0 && prefix(location, 'posts')) {
     return true

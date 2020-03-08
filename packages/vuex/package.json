@@ -1,5 +1,5 @@
 {
-  "name": "posts",
+  "name": "vuex-single-spa",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -10,10 +10,6 @@
   "dependencies": {
     "async-decorator": "0.3.0",
     "core-js": "^3.6.4",
-    "single-spa-vue": "^1.5.4",
-    "systemjs-webpack-interop": "^1.1.2",
-    "vue": "^2.6.11",
-    "vue-router": "^3.1.6",
     "vuex": "^3.1.2"
   },
   "devDependencies": {

@@ -1,15 +1,13 @@
-import Vue from 'vue'
-import App from './App.vue'
-import singleSpaVue from 'single-spa-vue';
+import Vue from 'vue';
+import Vuex from 'vuex';
+import store from './vuex';
+import App from './App.vue';
 import router from './router';
-import VueRouter from 'vue-router'
+import singleSpaVue from 'single-spa-vue';
+
+Vue.use(Vuex)
 
 Vue.config.productionTip = false
-
-// new Vue({
-//   render: h => h(App),
-// }).$mount('#app')
-Vue.use(VueRouter)
 
 const vueLifecycles = singleSpaVue({
   Vue,
@@ -17,6 +15,7 @@ const vueLifecycles = singleSpaVue({
     el: '#navbar',
     render: r => r(App),
     router,
+    store,
   } 
 });
 
